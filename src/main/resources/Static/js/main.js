@@ -109,13 +109,16 @@ function displayMessage(senderId, content) {
     messageContainer.classList.add('message');
     if (senderId === nickname) {
         messageContainer.classList.add('sender');
+        chatArea.classList.add('bg-img');
     } else {
         messageContainer.classList.add('receiver');
+        chatArea.classList.add('bg-img');
     }
     const message = document.createElement('p');
     message.textContent = content;
     messageContainer.appendChild(message);
     chatArea.appendChild(messageContainer);
+
 }
 
 async function fetchAndDisplayUserChat() {
